@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html ng-app="nodeTodo">
+<head>
+  <meta charset="utf-8">
+  <title>Node Todo</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+  <script src="angularApp.js"></script>
+</head>
+
+<body ng-controller="mainController">
+  
+  <div class="container">
+    <div class="jumbotron text-center" >
+      <h1>Things to do<span class="label label-info"> {{ todos.length }}</span></h1>
+    </div>
+
+    <div id="todo-list" class="row">
+      <div class="col-sm-4 col-sm-offset-4">
+        <div class="checkbox" ng-repeat="todo in todos">
+          <label>
+            <input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text }}
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div id="todo-form" class="row">
+      <div class="col-sm-8 col-sm-offset-2 text-center">
+        <form>
+          <div class="form-group">
+            <input type="text" class="form-control input-lg text-center" placeholder="Rule the world" ng-model="formData.text">
+          </div>
+
+          <button type="submit" class="btn btn-info btn-lg" ng-click="createTodo()">Add Task</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
