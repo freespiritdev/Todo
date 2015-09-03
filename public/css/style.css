@@ -1,0 +1,15 @@
+body {
+  background-color: #002;
+  color: #fff;
+}
+
+h1 {
+  margin: 20px;
+  color: #ffffff;
+}
+
+.jumbotron {
+  background-color: transparent;
+  letter-spacing: 4px;
+}
+

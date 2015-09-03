@@ -8,6 +8,8 @@ var methodOverride = require('method-override');
 
 mongoose.connect('mongodb://localhost/todo');
 
+var path = require('path');
+app.use('/css',express.static(path.join(__dirname, 'public/css')));
 app.use(express.static(__dirname + '/public'));
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({'extended':'true'}));

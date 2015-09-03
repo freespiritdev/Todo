@@ -13,6 +13,7 @@
     "mongoose"   : "~4.0.7",
     "morgan"     : "~1.6.1",
     "body-parser": "~1.13.2",
-    "method-override": "~2.3.4"
+    "method-override": "~2.3.4",
+    "mongodb": "2.0.39"
   }
 }
