@@ -5,7 +5,6 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 
-
 mongoose.connect('mongodb://localhost/todo');
 
 var path = require('path');
@@ -67,7 +66,6 @@ app.delete('/api/todos/:todo_id', function(req, res) {
 app.get('*', function(req, res) {
   res.sendfile('./public/index.html');
 });
-
-    
+ 
 app.listen(3000);
 console.log("App listening on port 3000");
